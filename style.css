@@ -1,0 +1,255 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+header {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vw 4vw;
+
+    .loguinho {
+        width: 4%;
+    }
+
+    .icon {
+        gap: 20px;
+        width: 25%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    nav {
+        gap: 20px;
+        display: flex;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+body {   
+    color: white;   
+}
+
+.slider{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+        .slide {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(100deg, #2AC4FF, #0d77a5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4vw;
+            padding: 4vw 4vw 0 0;
+            position: absolute;
+            transition: opacity .3s clip-path .3s;
+            clip-path: circle(0% at 90% 50%);
+            opacity: 0;
+
+            .sabor {/*.sabor {
+                transform: translateX(-50%);
+            }  Move o item para fora do box, restante NÃO segue o item. portanto nesse caso se torna inviável.*/
+                margin-left: -25%;
+                width: 40vw;
+            }
+            .conteudo {
+                max-width: 35%;
+
+                h2{
+                    font-size: 4vw;
+                    display: flex;
+                    justify-content: start;
+                }
+                p {
+                    font-size: clamp(14px, 2vw, 18px);
+                    padding: 1.5vw 0;
+
+                }
+            } 
+        }
+
+        .slide.ativo {
+            opacity: 1;
+            clip-path: circle(120% at 90% 50%);
+        }
+
+        .latas {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-left: 10vw;
+            
+            img:nth-child(1){
+                display: flex;
+                width: 50%;
+                height: fit-content;
+            }
+            img:nth-child(2){
+                display: flex;
+                width: 38%;
+                height: fit-content;
+            }
+        }
+
+        .slide:nth-child(2) {
+            background-image: linear-gradient(100deg, #FF849D, #b14559);
+        }
+
+        .slide:nth-child(3) {
+            background-image: linear-gradient(100deg, #FF8917, #b45502);
+        }
+
+        .slide:nth-child(4) {
+            background-image: linear-gradient(100deg, #008E5E, #013d28);
+        }
+}
+
+button {
+    font-family: "Poppins";
+    padding: 10px;
+    background-color: #ffffffd2;
+    border: white;
+    border-radius: 12px;
+}
+
+.sabores {
+    background-color: #a0a0a0;
+
+    h2 {
+        font-size: 4vw;
+    }
+
+    p {
+        font-size: 1.3vw;
+    }
+
+    .cards {
+        .arrow {
+            opacity: 70%;
+            width: 7%;
+            position: absolute;
+            transform: rotate(37deg);
+
+        }
+        .icone {
+            position: absolute;
+            width: 6%;
+        }
+    }
+
+    .laranja {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        img {
+            max-width: 10%;
+            transform: rotate(22deg);
+        }
+        .card {
+            .arrow {
+                right: 58%;
+            }
+            .icone {
+                right: 52%;
+            }
+            justify-content: space-between;
+            padding: 1vw;
+            display: flex;
+            flex-direction: column;
+            border-radius: 40px;
+            width: 30vw;
+            height: 30vh;
+            background-color: #feb859;
+        }
+    }
+
+    .azul {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        img {
+            max-width: 10%;
+            transform: rotate(-22deg);
+        }
+        .card {
+            .arrow {
+                right: 25%;
+            }
+            .icone {
+                right: 22%;
+            }
+            justify-content: space-between;
+            padding: 1vw;
+            display: flex;
+            flex-direction: column;
+            border-radius: 40px;
+            width: 30vw;
+            height: 30vh;
+            background-color: #57c3ee;
+        }
+    }
+
+    .verde {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        img {
+            max-width: 10%;
+            transform: rotate(22deg);
+        }
+        .card {
+            .arrow {
+                transform: rotate(180deg);
+                right: 58%;
+            }
+            .icone {
+                right: 52%;
+            }
+            padding: 1vw;
+            display: flex;
+            flex-direction: column;
+            border-radius: 40px;
+            width: 30vw;
+            height: 30vh;
+            background-color: #39b88d;
+        }
+    }
+}
+
+footer {
+    color: #000000e3;
+    font-size: 2vw;
+    
+
+    img {
+        width: 15%;
+    }
+    .arrow {
+        width: 10%;
+        opacity: 80%;
+    }
+    button {
+        padding: 16px;
+        border-radius: 7px;
+        font-weight: bold;
+        color: white;
+        background-color: #bd4c61;
+    }
+}
