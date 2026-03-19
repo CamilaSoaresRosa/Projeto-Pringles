@@ -49,6 +49,11 @@ body {
     height: 100vh;
     display: flex;
 
+        .slide.ativo {
+            opacity: 1;
+            clip-path: circle(120% at 90% 50%);
+            transition: opacity .1s, clip-path 1s;
+        }
         .slide {
             width: 100%;
             height: 100vh;
@@ -58,10 +63,12 @@ body {
             align-items: center;
             gap: 4vw;
             padding: 4vw 4vw 0 0;
+
+
             position: absolute;
-            transition: opacity .3s clip-path .3s;
-            clip-path: circle(0% at 90% 50%);
             opacity: 0;
+            transition: opacity .1s, clip-path 1s;
+            clip-path: circle(0% at 90% 50%);
 
             .sabor {/*.sabor {
                 transform: translateX(-50%);
@@ -85,10 +92,7 @@ body {
             } 
         }
 
-        .slide.ativo {
-            opacity: 1;
-            clip-path: circle(120% at 90% 50%);
-        }
+        
 
         .latas {
             display: flex;
